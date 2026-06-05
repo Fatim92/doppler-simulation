@@ -1,35 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Doppler Lab</title>
+    <meta charset="UTF-8">
+    <title>Doppler Lab - Medical Simulation</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- TITLE -->
     <h1>🌊 Doppler Effect Medical Simulator</h1>
 
+    <p class="subtitle">
+        Interactive simulation of blood flow using the Doppler effect
+    </p>
+
+    <!-- IMAGE SECTION -->
+    <div class="image-section">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Doppler_effect.svg/800px-Doppler_effect.svg.png"
+            alt="Doppler effect" width="350">
+    </div>
+
+    <!-- MAIN CONTAINER -->
     <div class="container">
 
+        <!-- SIMULATION PANEL -->
         <div class="panel">
-            <h2>Simulation</h2>
+
+            <h2>🩸 Blood Flow Simulation</h2>
 
             <label>Blood Flow Speed</label>
             <input type="range" id="speed" min="0" max="10" value="5">
 
-            <p>Frequency observed: <span id="freq">0</span></p>
+            <p>Observed Frequency: <span id="freq">0</span> Hz</p>
+
         </div>
 
+        <!-- MEDICAL CASE PANEL -->
         <div class="panel">
-            <h2>Medical Case</h2>
+
+            <h2>🏥 Medical Cases</h2>
+
             <button onclick="normalCase()">Normal Flow</button>
             <button onclick="stenosisCase()">Stenosis Case</button>
 
-            <p id="caseText"></p>
+            <p id="caseText">Select a case to see interpretation</p>
+
+        </div>
+
+        <!-- DATABASE PANEL -->
+        <div class="panel">
+
+            <h2>📊 Dataset (Simulated)</h2>
+
+            <button onclick="showDatabase()">Show Cases</button>
+
+            <ul id="db"></ul>
+
         </div>
 
     </div>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
