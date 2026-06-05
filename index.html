@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Doppler Simulation</title>
+    <title>Doppler Lab</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>🌊 Doppler Effect Simulation</h1>
+    <h1>🌊 Doppler Effect Medical Simulator</h1>
 
-    <p>Welcome to my physics project simulation.</p>
+    <div class="container">
 
+        <div class="panel">
+            <h2>Simulation</h2>
+
+            <label>Blood Flow Speed</label>
+            <input type="range" id="speed" min="0" max="10" value="5">
+
+            <p>Frequency observed: <span id="freq">0</span></p>
+        </div>
+
+        <div class="panel">
+            <h2>Medical Case</h2>
+            <button onclick="normalCase()">Normal Flow</button>
+            <button onclick="stenosisCase()">Stenosis Case</button>
+
+            <p id="caseText"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
